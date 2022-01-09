@@ -17,7 +17,7 @@
 import Navigation from './Navigation.vue'
 import NextRace from './blocks/next-race/NextRace.vue'
 export default {
-    name: 'Header',
+    name: 'HeaderBar',
     components: {
         Navigation,
         NextRace

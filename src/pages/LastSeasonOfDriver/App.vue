@@ -12,7 +12,7 @@ import DriverResult from '../../components/blocks/driver-result/DriverResult.vue
 import Header from '../../components/Header.vue'; 
 import Footer from '../../components/Footer.vue'; 
 export default {
-  name: 'Home',
+  name: 'LastSeasonOfDriver',
   components: {
     DriverResult,
     Header,

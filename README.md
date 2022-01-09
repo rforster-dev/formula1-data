@@ -32,4 +32,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - Finish CSS
 - Write Jenkins tests
 - Write automated tests
+- Change URL's to not be query strings
 - public prod build on github URL

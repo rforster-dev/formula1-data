@@ -16,7 +16,7 @@ import TeamList from '../../components/blocks/team-list/TeamList.vue';
 import Header from '../../components/Header.vue'; 
 import Footer from '../../components/Footer.vue'; 
 export default {
-  name: 'Home',
+  name: 'HomeApp',
   components: {
     HeroBanner,
     HeroDriverList,

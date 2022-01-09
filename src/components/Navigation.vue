@@ -12,7 +12,7 @@
 import { ref } from 'vue';
 
 export default {
-    name: 'Navigation',
+    name: 'NavigationBar',
     setup() {
         // make users variable reactive with the ref() function
         const navigationLinks = ref([
