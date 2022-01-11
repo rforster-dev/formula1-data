@@ -8,7 +8,6 @@ describe('HeroBanner', () => {
     mount(HeroBanner)
     cy.get('.hero-img').should('be.visible')
     .should('have.attr', 'src')
-    
   })
 
   it('Image has alt text', ()=>{

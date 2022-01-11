@@ -29,6 +29,11 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Todos
-- Cypress tests for all components
-- Tidy up CSS (make sass)
-- Tidy up HTML
+- Cypress tests for all components ✅
+- Cypress tests for screenshot testing ✅
+- Amend title on each page from "Vue App"
+- Footer Menu
+- Loading ICON state for Driver list
+- CSS effects
+- Tidy up CSS into 1 sass file
+- Tidy up HTML (class names, ids, etc)

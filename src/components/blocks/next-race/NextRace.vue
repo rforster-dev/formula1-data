@@ -11,10 +11,7 @@
           </svg>
         </span>
         <p class="ml-3 font-medium text-white truncate">
-          <span class="md:hidden">
-            
-          </span>
-          <span class="hidden md:inline">
+          <span class="nextrace-cta md:inline">
             Round {{nextRaceRound}} of the {{nextRaceSeason}} season at the <a :href="nextRaceLink" target="_blank">{{nextRaceName}}</a> on the {{nextRaceDate}} is the next race
           </span>
         </p>

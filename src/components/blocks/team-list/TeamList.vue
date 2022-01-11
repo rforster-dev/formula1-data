@@ -8,7 +8,7 @@
          Who competed in the thrilling 2021 season?
         </h3>
         <p class="mt-4 text-stone-800 text-xl font-medium">
-          {{howManyConstructors}} teams were fighting for it in the constructors championship.
+          <span id="totalteams">{{howManyConstructors}}</span> teams were fighting for it in the constructors championship.
         </p>
         <p><span v-for="constructor in constructors" :key="constructor.key">{{constructor.teamName}}, </span></p>
       </div>
@@ -17,7 +17,7 @@
         </div>
         <div class="transform md:rounded-md  bg-white rotate-3 scale-110 translate-x-10 md:shadow-2xl -ml-4 -mt-44 p-12  space-y-2">
           <div class="px-4 sm:px-0 grid grid-cols-5 sm:grid-cols-4 gap-2 sm:gap-8 max-w-5xl mx-auto">
-            <a  v-for="constructor in constructors" :key="constructor.key" :href="constructor.wikiLink" target="_blank">
+            <a  class="constructor-logos" v-for="constructor in constructors" :key="constructor.key" :href="constructor.wikiLink" target="_blank">
               <img :src="constructor.img"/>      
             </a>
                    
@@ -46,7 +46,7 @@ export default {
 
           this.howManyConstructors      = response.data.MRData.total;
           let allConstructors          = response.data.MRData.ConstructorTable.Constructors;
-console.log(allConstructors)
+          console.log(allConstructors)
           for(let i = 0; i < allConstructors.length; i++) {
               this.constructors.push({
                 'teamName'  :  allConstructors[i].name,

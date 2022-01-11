@@ -1,5 +1,8 @@
 .DS_Store
 node_modules
+cypress/videos
+cypress/screenshots
+
 #/dist
 
 

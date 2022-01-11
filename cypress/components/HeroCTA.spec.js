@@ -10,18 +10,24 @@ describe('HeroCTA', () => {
     cy.get('.hero-cta-text').should('be.visible')
   })
 
+  it('I am testing if thiss is visible', ()=>{
+    mount(HeroCTA)
+    
+  })
+
   it('Link should be visible', () => {
     mount(HeroCTA)
     cy.get('.hero-cta-link').should('be.visible')
   
   })
 
-  it('3 CTA boxes should be visible with correct data', () => {
+  it('3 CTA boxes should be visible', () => {
     mount(HeroCTA)
     cy.get('.hero-cta-firstraces').should('have.length', 3)
     .each(($childEl) => {
      console.log($childEl)
-     // find each element within to have h3, p.
+     cy.get($childEl[0]).should('be.visible')
+
     })
   
   })

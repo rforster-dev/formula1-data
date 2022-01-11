@@ -9,12 +9,14 @@ describe('DriverSeasonResults', () => {
     cy.get('.page-title').should('be.visible')
   })
 
+  
+
   it('Top 3 drivers show', () => {
     mount(DriverSeasonResults)
     cy.get('.driver-finishtop3').should(($childEl) => {
       //expect there to be 3 elements
       expect($childEl).to.have.length(3)
-        
+
       //expect the driver who finished first, to be ordered second grid
      // expect($childEl.first()).should('have.css', 'order')
      // .and('match', /2/)
