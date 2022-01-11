@@ -2,7 +2,7 @@
   <div class="flex flex-col h-screen justify-between">
       <Header/>
         <HeroBanner />
-        <HeroDriverList />
+        <HeroCTA />
         <TeamList />
       <Footer/>
   </div> 
@@ -11,7 +11,7 @@
 <script>
 import '../../index.css'
 import HeroBanner from '../../components/blocks/hero-banner/HeroBanner.vue'; 
-import HeroDriverList from '../../components/blocks/hero-driverlist/HeroDriverList.vue'; 
+import HeroCTA from '../../components/blocks/hero-cta/HeroCTA.vue'; 
 import TeamList from '../../components/blocks/team-list/TeamList.vue'; 
 import Header from '../../components/Header.vue'; 
 import Footer from '../../components/Footer.vue'; 
@@ -19,7 +19,7 @@ export default {
   name: 'HomeApp',
   components: {
     HeroBanner,
-    HeroDriverList,
+    HeroCTA,
     TeamList,
     Header,
     Footer

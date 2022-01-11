@@ -2,7 +2,7 @@
 <!-- check if query is retrieved and if not, then show 404 error? -->
     <div class="container mx-auto">
           <h1 class="mt-20 font-medium text-center text-3xl font-bold pb-10">Final classification</h1>
-      <div class="mt-10 driver-season-result-top grid max-w-md gap-10 row-gap-5 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
+      <div class="page-title mt-10 driver-season-result-top grid max-w-md gap-10 row-gap-5 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
         
         <div class="driver-finishtop3 flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow" v-for="driverTop3 in AllDriverStandings.slice(0,3)" :key="driverTop3.key">
           <span class="trophy">🏆</span>
@@ -106,8 +106,6 @@
                     </div>
               </td>
             </tr>
-
-            <!-- More people... -->
           </tbody>
         </table>
       </div>
@@ -115,11 +113,6 @@
   </div>
 </div>
 
-
-
-        <div  v-for="driver in AllDriverStandings" :key="driver.key">
-          
-        </div>
       </div>
 
 
@@ -143,10 +136,9 @@ export default {
   created() {
     
     //Wlet urlParams = new URLSearchParams(window.location.search);
-    axios.get(`http://ergast.com/api/f1/current/driverStandings.json`)
+    axios.get(`https://ergast.com/api/f1/current/driverStandings.json`)
     .then(response => { 
             console.log(response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings)
-      
             this.AllDriverStandings           = response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings
 
     })
@@ -174,7 +166,7 @@ export default {
 }
 
 .driver-finishtop3:nth-child(1) .trophy{
-  font-size:9rem;
+  font-size:7rem;
 }
 .driver-finishtop3:nth-child(2){
   order:1;

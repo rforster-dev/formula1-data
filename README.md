@@ -29,8 +29,6 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Todos
-- Finish CSS
-- Write Jenkins tests
-- Write automated tests
-- Change URL's to not be query strings
-- public prod build on github URL
+- Cypress tests for all components
+- Tidy up CSS (make sass)
+- Tidy up HTML

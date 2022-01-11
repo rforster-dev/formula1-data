@@ -5,9 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:components": "vue-cli-service test:components"
   },
   "dependencies": {
+    "@cypress/vue": "^3.1.0",
+    "@cypress/webpack-dev-server": "^1.8.0",
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "autoprefixer": "^9.0.0",
     "axios": "^0.24.0",
@@ -20,6 +23,7 @@
     "vue3-carousel": "^0.1.35"
   },
   "devDependencies": {
+    "@cypress/vue": "*",
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-plugin-eslint": "~4.5.15",
     "@vue/cli-service": "~4.5.15",
@@ -31,6 +35,7 @@
     "eslint-plugin-vue": "^8.2.0",
     "postcss": "^7.0.39",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
+    "vue-cli-plugin-cypress-experimental": "~1.2.0",
     "vue-cli-plugin-tailwind": "~2.2.18"
   },
   "eslintConfig": {

@@ -6,9 +6,9 @@
       <div class="filter-cards  text-gray-900 px-2 py-3">
        
           
-          <div class="block px-2 py-3">
+          <div id="finishingStatusFilters" class="block px-2 py-3">
             <h2 class="font-medium text-gray-900 mb-4">Finishing status</h2>
-            <div v-for="finishStatus in driverFinishStatuses" :key="finishStatus.key" class="form-check">
+            <div  v-for="finishStatus in driverFinishStatuses" :key="finishStatus.key" class="form-check filter-item">
               <input class="form-check-input radiobutton mr-2 mb-4" type="radio" :id="finishStatus.status" :value="finishStatus.statusId" name="filteredby" v-model="selecetedFinishingStatus" />
               <label class="form-check-label" :for="finishStatus.status">{{finishStatus.status}}</label>
 
@@ -23,13 +23,13 @@
       <p class="page-subheading">{{driverCount}} drivers in total</p>
       <h1 class="page-title text-3xl font-bold" >All drivers from 2021 season</h1>
     
-      <div class="pt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5">
-        <div v-for="driver in list_allDrivers" :key="driver.key"  class="bg-white rounded overflow-hidden shadow-lg">
+      <div id="driverProfiles" class="pt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5">
+        <div v-for="driver in list_allDrivers" :key="driver.key"  class="driver-profile bg-white rounded overflow-hidden shadow-lg">
           <img class="w-full " v-if="driver.driverData[1]" :src="driver.driverData[1].driverImg"/>
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">{{driver.driverData[0].givenName}} {{driver.driverData[0].familyName}}</div>
             <p class="text-gray-700 text-base">
-              <a :href="'driver-results.html?driver='+driver.driverId+''" class="underline block">View last season performance</a>
+              <a :href="'driver-results.html?driver='+driver.driverId+''" class="underline block profile-link">View last season performance</a>
               <a :href="driver.url" target="_blank" rel="nofollow" class="underline block">Read wikipedia entry</a>
             </p>
           </div>

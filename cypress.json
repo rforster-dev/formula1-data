@@ -1,3 +1,6 @@
-{
-    "projectId": "oa6fed"
-}
+{     "projectId": "oa6fed",
+    "component": {
+        "componentFolder": "cypress/components",
+        "testFiles": "**/*spec.{js,jsx,ts,tsx}"
+      }
+  }

@@ -1,11 +1,12 @@
 <template>
 <!-- check if query is retrieved and if not, then show 404 error? -->
     <div>
+      <p>{{username}}</p>
         <div class="hero-banner--driver relative">
             <h2 v-if="givenName" class="driver-name">{{givenName}} {{familyName}}</h2>
             <h3 v-if="constructorTeam" class="constructor-name">{{constructorTeam}}</h3>
 
-            <img v-if="constructorCar" :src="constructorCar"/>
+            <img class="constructor-image" v-if="constructorCar" :src="constructorCar"/>
             <!-- Driver car, nationality colours, race number, picture, and final standing for last season -->
         </div>
         <carousel :items-to-show="1">
@@ -54,7 +55,7 @@ import { Carousel, Slide, Navigation } from 'vue3-carousel';
 
 export default {
   name: 'DriverResult',
-  
+  props: ['driverID'],
   data () {
     return {
         allRaces        : [],
@@ -63,14 +64,17 @@ export default {
         familyName      : [],
         driverNumber    : [],
         constructorTeam : [],
-        constructorCar  : []
+        constructorCar  : [],
+        retrievedDriverQ: this.driverID
 
     }
   },
   created() {
     
-    let urlParams = new URLSearchParams(window.location.search);
-    axios.get(`https://ergast.com/api/f1/current/drivers/${urlParams.get('driver')}/results.json`)
+    //let urlParams = new URLSearchParams(window.location.search);
+    let urlParams = this.retrievedDriverQ;
+    urlParams.replace('driver=','');
+    axios.get(`https://ergast.com/api/f1/current/drivers/${urlParams}/results.json`)
     .then(response => { 
          console.log(response.data.MRData.RaceTable.Races)
       
@@ -92,14 +96,10 @@ export default {
     Slide, 
     Navigation,
   },
+ 
 }
 
-/**@todo
- * - Style carousel arrows
- * - Add "team mate" function?
- * - Link to all drivers
- * 
- */
+
 </script>
 
 <style scoped>

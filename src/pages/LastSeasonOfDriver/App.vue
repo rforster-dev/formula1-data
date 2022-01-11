@@ -1,12 +1,13 @@
 <template>
 <div>
     <Header/>
-    <DriverResult/>
+    <DriverResult :driverID="driver.driverID"/>
     <Footer/>
 </div> 
 </template>
 
 <script>
+
 import '../../index.css'
 import DriverResult from '../../components/blocks/driver-result/DriverResult.vue'; 
 import Header from '../../components/Header.vue'; 
@@ -17,6 +18,15 @@ export default {
     DriverResult,
     Header,
     Footer
+  },
+  data(){
+    return{
+      driver: {
+       driverID: new URLSearchParams(window.location.search)
+     }
+     // urlParam: new URLSearchParams(window.location.search)
+    }
   }
+
 }
 </script>
