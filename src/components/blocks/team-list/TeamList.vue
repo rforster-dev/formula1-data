@@ -1,6 +1,6 @@
 <template>
    <div>
-      <section class="pt-20 bg-gray-100 mt-20">
+      <section class="pt-20 bg-gray-100 mt-20 overflow-h">
          <div class="grid grid-cols-1 sm:grid-cols-2  gap-10 mx-auto  items-center max-w-6xl mx-auto">
             <div class="px-4 md:mr-6">
                <p class="text-4xl pr-6 sm:leading-snug tracking-tight font-bold text-black">Who competed in the thrilling 2021 season?</p>
@@ -74,6 +74,10 @@ export default {
     100% {
         background-position: 0% 50%;
     }
+}
+
+.overflow-h {
+   overflow:hidden;
 }
 
 </style>

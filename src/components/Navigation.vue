@@ -1,11 +1,11 @@
 <template>
-   <nav id="primary-nav" class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-      <ul class="grid grid-cols-4 gap-y-4 gap-x-8">
-         <li v-for="navigationLink in navigationLinks" :key="navigationLink.id">
-            <a class="mr-5 hover:text-gray-900" v-bind:href="navigationLink.linkURL">{{navigationLink.linkTitle}}</a>
-         </li>
-      </ul>
-   </nav>
+    <nav class="text-sm font-medium md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <ul>
+            <li v-for="navigationLink in navigationLinks" :key="navigationLink.id" class="inline-block xs-small-text">
+                <a class="mr-5 hover:text-gray-900" v-bind:href="navigationLink.linkURL">{{navigationLink.linkTitle}}</a>
+            </li>
+        </ul>
+    </nav>
 </template>
 
 <script>
@@ -29,3 +29,12 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+
+@media (max-width:500px){
+    .xs-small-text a {
+        font-size:0.5rem;
+    }
+}
+</style>
