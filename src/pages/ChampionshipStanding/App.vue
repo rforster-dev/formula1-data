@@ -1,9 +1,9 @@
 <template>
-<div>
-    <Header/>
-    <DriverSeasonResults/>
-    <Footer/>
-</div> 
+  <div>
+      <Header/>
+      <DriverSeasonResults/>
+      <Footer/>
+  </div> 
 </template>
 
 <script>
@@ -18,6 +18,9 @@ export default {
     DriverSeasonResults,
     Header,
     Footer
+  },
+  created(){
+    document.title = 'Final championship standings'
   }
 }
 </script>

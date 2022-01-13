@@ -1,9 +1,9 @@
 <template>
-<div>
-    <Header/>
-    <DriverResult :driverID="driver.driverID"/>
-    <Footer/>
-</div> 
+  <div>
+      <Header/>
+      <DriverResult :driverID="driver.driverID"/>
+      <Footer/>
+  </div> 
 </template>
 
 <script>
@@ -19,6 +19,7 @@ export default {
     Header,
     Footer
   },
+ 
   data(){
     return{
       driver: {
@@ -26,6 +27,9 @@ export default {
      }
      // urlParam: new URLSearchParams(window.location.search)
     }
+  },
+  created(){
+    document.title = 'Last season result of driver'
   }
 
 }

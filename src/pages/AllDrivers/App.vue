@@ -1,9 +1,9 @@
 <template>
-<div>
-    <Header/>
-    <Driverlist/>
-    <Footer/>
-</div> 
+  <div>
+      <Header/>
+      <Driverlist/>
+      <Footer/>
+  </div> 
 </template>
 
 <script>
@@ -17,6 +17,9 @@ export default {
     Driverlist,
     Header,
     Footer
+  },
+  created(){
+    document.title = 'All drivers and finishing statuses'
   }
 }
 </script>

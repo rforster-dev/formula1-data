@@ -1,9 +1,9 @@
 <template>
   <div class="flex flex-col h-screen justify-between">
       <Header/>
-        <HeroBanner />
-        <HeroCTA />
-        <TeamList />
+      <HeroBanner />
+      <HeroCTA />
+      <TeamList />
       <Footer/>
   </div> 
 </template>
@@ -23,16 +23,11 @@ export default {
     TeamList,
     Header,
     Footer
+  },
+  created(){
+    document.title = 'Home'
   }
 }
 
-/**
- * UI components
- * How many race wins did he get and points section
- * All competing teams logo
- * How many races did they go to
- * How many DNFS? 
- * Image gallery?
- * 
- */
+
 </script>
