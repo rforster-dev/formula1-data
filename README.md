@@ -27,11 +27,11 @@ This has been tested using Cypress, Lighthouse, and exploratory testing. It is W
 
 ### Example links
 
-- [https://f1data.project.russforster.co.uk/](Home)
-- [https://f1data.project.russforster.co.uk/all-drivers.html](All drivers)
-- [https://f1data.project.russforster.co.uk/driver-results.html?driver=max_verstappen](Specific driver)
-- [https://f1data.project.russforster.co.uk/championship-standings.html](Final championship standing)
-- [https://f1data.project.russforster.co.uk/season-list.html](Race list)
+- [Home](https://f1data.project.russforster.co.uk/)
+- [All drivers](https://f1data.project.russforster.co.uk/)
+- [Specific drivers](https://f1data.project.russforster.co.uk/driver-results.html?driver=max_verstappen)
+- [Final championship standings](https://f1data.project.russforster.co.uk/championship-standings.html)
+- [Race list](https://f1data.project.russforster.co.uk/season-list.html)
 
 ### Improvements
 
