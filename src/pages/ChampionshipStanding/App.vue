@@ -21,6 +21,7 @@ export default {
   },
   created(){
     document.title = 'Final championship standings'
+    document.documentElement.setAttribute('lang','en-GB')
   }
 }
 </script>

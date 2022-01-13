@@ -26,6 +26,7 @@ export default {
   },
   created(){
     document.title = 'Home'
+    document.documentElement.setAttribute('lang','en-GB')
   }
 }
 

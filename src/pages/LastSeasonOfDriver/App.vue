@@ -27,9 +27,10 @@ export default {
      }
      // urlParam: new URLSearchParams(window.location.search)
     }
-  },
+  }, 
   created(){
     document.title = 'Last season result of driver'
+    document.documentElement.setAttribute('lang','en-GB')
   }
 
 }

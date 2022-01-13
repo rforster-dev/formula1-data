@@ -22,6 +22,15 @@ The deployed files are located within docs folder, so that github can host the s
 
 All built files for production get produced into the dist folder
 
+This has been tested using Cypress, Lighthouse, and exploratory testing. It is WCAG 2.1 AA compliant.
+
+### Example links
+
+- [https://f1data.project.russforster.co.uk/](Home)
+- [https://f1data.project.russforster.co.uk/all-drivers.html](All drivers)
+- [https://f1data.project.russforster.co.uk/driver-results.html?driver=max_verstappen](Specific driver)
+- [https://f1data.project.russforster.co.uk/championship-standings.html](Final championship standing)
+- [https://f1data.project.russforster.co.uk/season-list.html](Race list)
 
 ### Improvements
 
@@ -51,6 +60,7 @@ npm run serve
 ```
 npm run build
 ```
+Note: If you are having problems running this command in your editor, try navigating to the folder in command prompt and running from there
 
 ### Lints and fixes files
 ```

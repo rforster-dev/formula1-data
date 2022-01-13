@@ -17,7 +17,7 @@
                               <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                            </svg>
                         </div>
-                        <h6 class="text-4xl font-bold text-deep-purple-accent-400">{{driverTop3.wins}}</h6>
+                        <p class="text-4xl font-bold text-deep-purple-accent-400">{{driverTop3.wins}}</p>
                         <p class="mb-2 font-bold text-md">Wins</p>
                      </div>
                      <div class="text-center">
@@ -26,7 +26,7 @@
                               <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                            </svg>
                         </div>
-                        <h6 class="text-4xl font-bold text-deep-purple-accent-400">{{driverTop3.points}}</h6>
+                        <p class="text-4xl font-bold text-deep-purple-accent-400">{{driverTop3.points}}</p>
                         <p class="mb-2 font-bold text-md">Points</p>
                      </div>
                   </div>
@@ -126,25 +126,29 @@ export default {
 .driver-finishtop3 {
   text-align:center;
 }
-.driver-finishtop3:nth-child(1){
-  order:2;
+@media(min-width:767px){
+   .driver-finishtop3:nth-child(1){
+      order:2;
+   }
+   .driver-finishtop3:nth-child(2){
+      order:1;
+      margin-top:5rem;
+   }
+   .driver-finishtop3:nth-child(3){
+      order:3;
+      margin-top:10rem;
+   }
 }
 
 .driver-finishtop3:nth-child(1) .trophy{
   font-size:7rem;
 }
-.driver-finishtop3:nth-child(2){
-  order:1;
-   margin-top:5rem;
-}
+
 .driver-finishtop3:nth-child(2) .trophy{
   font-size:6rem;
  
 }
-.driver-finishtop3:nth-child(3){
-  order:3;
-   margin-top:10rem;
-}
+
 .driver-finishtop3:nth-child(3) .trophy{
   font-size:2.6rem;
   

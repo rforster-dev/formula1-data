@@ -20,6 +20,7 @@ export default {
   },
   created(){
     document.title = "Race results"
+    document.documentElement.setAttribute('lang','en-GB')
   }
 }
 </script>

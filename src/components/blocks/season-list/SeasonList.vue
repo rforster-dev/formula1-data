@@ -9,14 +9,14 @@
                      <span class="race-round font-semibold title-font text-gray-700">Round {{race.round}}</span>
                      <span class="race-timedate mt-1 text-gray-500 text-sm">{{race.date}} - {{race.time}}</span>
                      <p class="mt-1 text-gray-500 text-sm">{{race.Circuit.Location.locality}}, {{race.Circuit.Location.country}}</p>
-                     <a :href="`https://www.google.com/maps/place/${race.Circuit.Location.lat},${race.Circuit.Location.long}`" target="_blank" class="race-gmap-link text-indigo-500 inline-flex items-center mt-4">
+                     <a :href="`https://www.google.com/maps/place/${race.Circuit.Location.lat},${race.Circuit.Location.long}`" target="_blank" class="race-gmap-link text-indigo-800 inline-flex items-center mt-4">
                         Google maps
                         <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                            <path d="M5 12h14"></path>
                            <path d="M12 5l7 7-7 7"></path>
                         </svg>
                      </a>
-                     <a :href="`${race.Circuit.url}`" target="_blank" class="race-wikilink text-indigo-500 inline-flex items-center mt-4">
+                     <a :href="`${race.Circuit.url}`" target="_blank" class="race-wikilink text-indigo-800 inline-flex items-center mt-4">
                         Wikipedia entry
                         <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                            <path d="M5 12h14"></path>
@@ -26,7 +26,7 @@
                   </div>
                   <div class="md:flex-grow">
                      <h2 class="race-title text-2xl font-bold text-transparent md:text-3xl bg-clip-text bg-gradient-to-tr from-red-400  to-red-800">  {{race.raceName}}</h2>
-                     <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+                     <div class="h-1 w-20 bg-indigo-800 rounded"></div>
                      <section class="text-gray-600 body-font">
                         <div class="container px-4 py-10 mx-auto">
                            <div class="flex flex-wrap -m-4 text-center">

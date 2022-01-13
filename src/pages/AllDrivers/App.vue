@@ -20,6 +20,7 @@ export default {
   },
   created(){
     document.title = 'All drivers and finishing statuses'
+    document.documentElement.setAttribute('lang','en-GB')
   }
 }
 </script>
