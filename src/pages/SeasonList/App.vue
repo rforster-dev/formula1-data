@@ -1,9 +1,9 @@
 <template>
-<div>
-    <Header/>
-    <SeasonList/>
-    <Footer/>
-</div> 
+  <div>
+      <Header/>
+      <SeasonList/>
+      <Footer/>
+  </div> 
 </template>
 
 <script>
@@ -17,6 +17,10 @@ export default {
     SeasonList,
     Header,
     Footer
+  },
+  created(){
+    document.title = "Race results"
+    document.documentElement.setAttribute('lang','en-GB')
   }
 }
 </script>

@@ -1,9 +1,9 @@
 <template>
   <div class="flex flex-col h-screen justify-between">
       <Header/>
-        <HeroBanner />
-        <HeroDriverList />
-        <TeamList />
+      <HeroBanner />
+      <HeroCTA />
+      <TeamList />
       <Footer/>
   </div> 
 </template>
@@ -11,7 +11,7 @@
 <script>
 import '../../index.css'
 import HeroBanner from '../../components/blocks/hero-banner/HeroBanner.vue'; 
-import HeroDriverList from '../../components/blocks/hero-driverlist/HeroDriverList.vue'; 
+import HeroCTA from '../../components/blocks/hero-cta/HeroCTA.vue'; 
 import TeamList from '../../components/blocks/team-list/TeamList.vue'; 
 import Header from '../../components/Header.vue'; 
 import Footer from '../../components/Footer.vue'; 
@@ -19,20 +19,16 @@ export default {
   name: 'HomeApp',
   components: {
     HeroBanner,
-    HeroDriverList,
+    HeroCTA,
     TeamList,
     Header,
     Footer
+  },
+  created(){
+    document.title = 'Home'
+    document.documentElement.setAttribute('lang','en-GB')
   }
 }
 
-/**
- * UI components
- * How many race wins did he get and points section
- * All competing teams logo
- * How many races did they go to
- * How many DNFS? 
- * Image gallery?
- * 
- */
+
 </script>
