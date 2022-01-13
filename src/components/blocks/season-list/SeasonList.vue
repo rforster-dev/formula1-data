@@ -1,8 +1,8 @@
 <template>
-   <div class="container mx-auto">
+   <div class="container mx-auto max-w-screen-xl ">
       <h1 class="mt-20 font-medium text-center text-3xl font-bold pb-10">Race results</h1>
       <section class="text-gray-600 body-font overflow-hidden">
-         <div class="container px-5 py-24 mx-auto">
+         <div class="container px-5  mx-auto">
             <div class="-my-8 divide-y-2 divide-gray-100">
                <div v-for="race in allRaces2021" :key="race.key" class="race-item py-8 flex flex-wrap md:flex-nowrap">
                   <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
@@ -25,24 +25,24 @@
                      </a>
                   </div>
                   <div class="md:flex-grow">
-                     <h2 class="race-title text-2xl font-bold text-transparent md:text-3xl bg-clip-text bg-gradient-to-tr from-red-400  to-red-800">  {{race.raceName}}</h2>
+                     <h2 class="race-title text-2xl font-bold text-gray-900 md:text-3xl ">  {{race.raceName}}</h2>
                      <div class="h-1 w-20 bg-indigo-800 rounded"></div>
                      <section class="text-gray-600 body-font">
                         <div class="container px-4 py-10 mx-auto">
                            <div class="flex flex-wrap -m-4 text-center">
-                              <div class="pt-4 pb-4 text-left sm:w-1/4 w-1/2">
+                              <div class="text-left p-2 sm:w-1/4 w-1/2">
                                  <h2 class="race-winner title-font font-medium sm:text-2xl text-1xl text-gray-900">{{race.Results[0].Driver.givenName}} {{race.Results[0].Driver.familyName}}</h2>
                                  <p class="leading-relaxed">Winner</p>
                               </div>
-                              <div class="p-4 sm:w-1/4 w-1/2">
+                              <div class="text-left p-2 sm:w-1/4 w-1/2">
                                  <h2 class="race-constructor title-font font-medium sm:text-2xl text-1xl text-gray-900">{{race.Results[0].Constructor.name}} </h2>
                                  <p class="leading-relaxed">Constructor</p>
                               </div>
-                              <div class="p-4 sm:w-1/4 w-1/2">
+                              <div class="text-left p-2 sm:w-1/4 w-1/2">
                                  <h2 class="race-laps title-font font-medium sm:text-2xl text-1xl text-gray-900">{{race.Results[0].laps}}</h2>
                                  <p class="leading-relaxed">Laps</p>
                               </div>
-                              <div class="pt-4 pb-4 text-right sm:w-1/4 w-1/2">
+                              <div class="text-left p-2 sm:w-1/4 w-1/2">
                                  <h2 class="race-finishtime title-font font-medium sm:text-2xl text-1xl text-gray-900">{{race.Results[0].Time.time}}</h2>
                                  <p class="leading-relaxed">Finishing time</p>
                               </div>

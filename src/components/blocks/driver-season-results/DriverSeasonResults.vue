@@ -1,5 +1,5 @@
 <template>
-   <div class="container mx-auto">
+   <div class="container max-w-screen-xl mx-auto">
       <h1 class="mt-20 font-medium text-center text-3xl font-bold pb-10">Final classification</h1>
       <div class="page-title mt-10 driver-season-result-top grid max-w-md gap-10 row-gap-5 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
          <div class="driver-finishtop3 flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow" v-for="driverTop3 in AllDriverStandings.slice(0,3)" :key="driverTop3.key">
@@ -12,20 +12,10 @@
                <div class="">
                   <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
                      <div class="text-center">
-                        <div class="flex items-center justify-center w-10 h-10 mx-auto mb-3 rounded-full bg-teal-accent-400 sm:w-12 sm:h-12">
-                           <svg class="w-8 h-8 text-teal-900 sm:w-10 sm:h-10" stroke="currentColor" viewBox="0 0 52 52">
-                              <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                           </svg>
-                        </div>
                         <p class="text-4xl font-bold text-deep-purple-accent-400">{{driverTop3.wins}}</p>
                         <p class="mb-2 font-bold text-md">Wins</p>
                      </div>
                      <div class="text-center">
-                        <div class="flex items-center justify-center w-10 h-10 mx-auto mb-3 rounded-full bg-teal-accent-400 sm:w-12 sm:h-12">
-                           <svg class="w-8 h-8 text-teal-900 sm:w-10 sm:h-10" stroke="currentColor" viewBox="0 0 52 52">
-                              <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                           </svg>
-                        </div>
                         <p class="text-4xl font-bold text-deep-purple-accent-400">{{driverTop3.points}}</p>
                         <p class="mb-2 font-bold text-md">Points</p>
                      </div>

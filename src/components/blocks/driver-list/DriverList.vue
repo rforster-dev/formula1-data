@@ -1,11 +1,27 @@
 <template>
-  <div class="container mx-auto">
-    <div class="... grid grid-cols-3 gap-4">
-      <aside class="mt-4">
-        <div class="filter-cards text-gray-900 px-2 py-3">
-          <div id="finishingStatusFilters" class="block px-2 py-3">
-            <h2 class="font-medium text-gray-900 mb-4">Finishing status</h2>
-            <div v-for="finishStatus in driverFinishStatuses" :key="finishStatus.key" class="form-check filter-item">
+
+
+
+
+<div class="container mx-auto">
+<section>
+  <div class="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:items-start">
+    <div class="llg:top-4">
+      <details open class="overflow-hidden border border-gray-200 rounded">
+        <summary class="flex items-center justify-between px-5 py-3 bg-gray-100 lg:hidden">
+          <span class="text-sm font-medium">
+            Toggle Filters
+          </span>
+
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </summary>
+
+        <div class="border-t p-5 border-gray-200 lg:border-t-0">
+          <p class="text-2xl font-medium mb-5">Finishing status</p>
+          <div v-for="finishStatus in driverFinishStatuses" :key="finishStatus.key" class="form-check filter-item">
               <input
                 class="form-check-input radiobutton mr-2 mb-4"
                 type="radio"
@@ -16,17 +32,19 @@
               />
               <label class="form-check-label" :for="finishStatus.status">{{finishStatus.status}}</label>
             </div>
-          </div>
-        </div>
-      </aside>
 
-      <div class="mt-10 col-span-2 ...">
+
+        </div>
+      </details>
+    </div>
+
+      <div class="lg:col-span-3">
+
         <p class="page-subheading">{{ driverCount }} drivers in total</p>
-        <h1 class="page-title text-3xl font-bold">
-          All drivers from 2021 season
-        </h1>
-        <div id="driverProfiles" class=" pt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5">
-          <div v-for="i in 12" :key="i" class=" box-placeholder mb-2 driver-profile bg-white rounded overflow-hidden shadow-lg">
+        <h1 class="page-title text-3xl font-bold">All drivers from 2021 season</h1>
+
+        <div class="all-drivers grid grid-cols-1 gap-px mt-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div v-for="i in 12" :key="i" class=" box-placeholder mb-2 p-2 driver-profile bg-white rounded overflow-hidden shadow-lg">
             <div class="image">
               <div class="embed-responsive embed-responsive-16by9"></div>
             </div>
@@ -37,8 +55,8 @@
             </div>
             <hr />
           </div>
-          <div v-for="driver in list_allDrivers" :key="driver.key" class="driver-profile bg-white rounded overflow-hidden shadow-lg">
-            <img class="w-full" v-if="driver.driverData[1]" :src="driver.driverData[1].driverImg" :alt="driver.driverData[0].givenName +' '+driver.driverData[0].familyName" />
+          <div v-for="driver in list_allDrivers" :key="driver.key" class="driver-profile overflow-hidden">
+            <img class="driver-img" v-if="driver.driverData[1]" :src="driver.driverData[1].driverImg" :alt="driver.driverData[0].givenName +' '+driver.driverData[0].familyName" />
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">
                 <p>{{ driver.driverData[0].givenName }} {{ driver.driverData[0].familyName }}</p>
@@ -57,17 +75,25 @@
               <span
                 class=" inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Nationality <strong>{{ driver.driverData[0].nationality }}</strong></span>
             </div>
-          </div>
+            </div>
+       
         </div>
       </div>
     </div>
+  </div>
+</section>
+
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import _ from "lodash";
+  window.addEventListener('resize', () => {
+    const desktopScreen = window.innerWidth < 768
 
+    document.querySelector('details').open = !desktopScreen
+  })
 export default {
   name: "DriverList",
 
@@ -187,16 +213,20 @@ export default {
   font-size: 0.9rem;
   color: darkslategrey;
 }
+
+.driver-profile{
+  border-bottom:1px solid lightgrey;
+}
+.driver-profile:nth-child(3n+2){
+  border-left:1px solid lightgrey;
+  border-right:1px solid lightgrey;
+}
 .driver-card {
   border-bottom: 1px solid darkslategrey;
   padding: 1rem 0.5rem;
 }
 
-.driver-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-}
+
 .form-check,
 .form-check-input,
 .form-check-label {
