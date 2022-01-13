@@ -10,6 +10,7 @@ This is a demonstration project using:
 | Version | Developer | Project link 
 |--|--|--|
 | v1.0 | Russ Forster | [https://f1data.project.russforster.co.uk](https://f1data.project.russforster.co.uk)
+
 This is a VueJS website built using data sourced from [https://ergast.com/](https://ergast.com/) api. It is comprised of the following site structure:
 
 - Home
