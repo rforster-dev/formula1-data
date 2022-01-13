@@ -18,7 +18,7 @@ This is a VueJS website built using data sourced from [https://ergast.com/](http
 - Last season performance of each driver
 - Race list
 
-The deployed files are located within docs folder, so that github can host the site pages.
+The deployed files are located within docs folder, so that github can host the site pages. A CNAME record has been applied to point to this github repo.
 
 All built files for production get produced into the dist folder
 
