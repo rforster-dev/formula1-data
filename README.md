@@ -18,7 +18,7 @@ This is a VueJS website built using data sourced from [https://ergast.com/](http
 -- Hero banner with data coming from API
 -- List of the first 3 races with description coming from API
 -- List of all teams racing in season from API
-- [All drivers](https://f1data.project.russforster.co.uk/)
+- [All drivers](https://f1data.project.russforster.co.uk/all-drivers.html)
 -- All drivers listed with information, in conjunction with filtering functionality to filter by which drivers finished a race with a particular status (dnf, engine failure etc) from APIs
 - [Specific drivers](https://f1data.project.russforster.co.uk/driver-results.html?driver=max_verstappen)
 -- Formulated page from query parameter of driver, and information from subsequent API call to get season data of said driver
