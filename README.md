@@ -32,6 +32,8 @@ This is a VueJS website built using data sourced from [https://ergast.com/](http
 -- This is made up of header title and links
 - Next race strapline
 -- This contains the next {round}, of the {season} at the {location} on the {date}
+- Error message
+-- This is a conditional block that will only display the error message passed into it from failing API's
 - Footer
 -- This is made up of links
 
